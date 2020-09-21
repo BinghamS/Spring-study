@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  autowire="byName"  由于在手动配置xml过程中，常常发生字母缺漏和大小写等错误，而无法对其进行检查，使得开发效率降低。
+        采用自动装配将避免这些错误，并且使配置简单化。-->
+ <!--   <bean id="user" class="com.song.pojo.User" autowire="byName">
+        <property name="str" value="qinjiang"/>
+    </bean>-->
+
+    <bean id="dog" class="com.song.pojo.Dog"/>
+    <bean id="cat" class="com.song.pojo.Cat"/>
+    <bean id="user" class="com.song.pojo.User">
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+        <property name="str" value="qinjiang"/>
+    </bean>
+
+
+    <!--通过无参构造器生成，set方法注入参数-->
+    <bean id="user1" class="com.song.pojo.User" p:str="123123"/>
+
+    <!--直接通过含参构造器生成-->
+    <bean id="user2" class="com.song.pojo.User" c:str="hahahahahh"/>
+
+
+</beans>

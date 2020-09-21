@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-mybatis" />
+        <module name="demo (1)" />
+        <module name="spring-JDBC" />
+        <module name="spring-DI-02" />
+        <module name="spring-DI-01" />
+        <module name="demo (2)" />
+        <module name="spring-02-appconfig" />
+        <module name="spring-aop" />
+        <module name="spring-IOC-02" />
+        <module name="spring-IOC-01" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo (1)" options="-parameters" />
+      <module name="demo (2)" options="-parameters" />
+      <module name="spring-DI-01" options="-parameters" />
+      <module name="spring-DI-02" options="-parameters" />
+    </option>
+  </component>
+</project>

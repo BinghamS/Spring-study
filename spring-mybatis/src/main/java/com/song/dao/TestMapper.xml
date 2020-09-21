@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.song.dao.TestDao">
+
+    <!--select查询语句-->
+    <select id="getTestList" resultType="com.song.pojo.Test">
+   select * from test.test
+    </select>
+
+
+    <!--添加一个数据-->
+    <insert id="addTest" parameterType="com.song.pojo.Test" >
+        insert into test (id,coll) values (#{id},#{coll});
+    </insert>
+
+    <!--更新一个数据-->
+    <update id="updateTest" parameterType="com.song.pojo.Test">
+        update test.test set coll = #{coll} where id =#{id}
+    </update>
+
+    <!--删除一个数据-->
+    <delete id="deleteTest" parameterType="int">
+        delete from test.test where id=#{id};
+    </delete>
+
+
+</mapper>
